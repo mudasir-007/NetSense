@@ -1,1 +1,14 @@
-g++ -std=c++17 -Iinclude src/*.cpp -o flowshield
+
+Step 1 — Generate the test pcap (needs Python):
+    python generate_test_pcap.py
+
+Step 2 — COMPILE
+g++ -std=c++17 -O2 -I include -o dpi_simple.exe src/main_simple.cpp src/pcap_reader.cpp src/packet_parser.cpp src/sni_extractor.cpp src/types.cpp
+
+
+Step 3 — Run with no blocking (just classify):
+
+    ./dpi_simple.exe test_dpi.pcap output.pcap
+
+Step 4 — Run with blocking:
+    ./dpi_simple.exe test_dpi.pcap output.pcap --block-app YouTube --block-domain tiktok

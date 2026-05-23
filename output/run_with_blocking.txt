@@ -1,0 +1,104 @@
+
+lenovo@sahilmadaan048 MINGW64 /d/Code_Everyday/WebDev PROJECTS/FlowShield (main)
+$ ./dpi_simple.exe test_dpi.pcap output.pcap --block-app YouTube --block-domain tiktok
+[Rules] Blocking app: YouTube
+[Rules] Blocking domain pattern: tiktok
+[PcapReader] Opened: test_dpi.pcap
+  Version:   2.4
+  Link type: 1 (Ethernet)
+  Snaplen:   65535 bytes
+
+ΓòöΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòù
+Γòæ             DPI ENGINE v1.0 (Single-threaded)                 Γòæ
+ΓòÜΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓò¥
+
+[DPI] Input:  test_dpi.pcap
+[DPI] Output: output.pcap
+
+[DPI] Processing packets...
+
+[SNI]  www.google.com  ΓåÆ  Google
+[SNI]  www.youtube.com  ΓåÆ  YouTube
+[BLOCKED] 192.168.1.100:58867 -> 142.250.185.110:443  app=YouTube  sni=www.youtube.com
+[SNI]  www.facebook.com  ΓåÆ  Facebook
+[SNI]  www.instagram.com  ΓåÆ  Instagram
+[SNI]  twitter.com  ΓåÆ  Twitter/X
+[SNI]  www.amazon.com  ΓåÆ  Amazon
+[SNI]  www.netflix.com  ΓåÆ  Twitter/X
+[SNI]  github.com  ΓåÆ  GitHub
+[SNI]  discord.com  ΓåÆ  Discord
+[SNI]  zoom.us  ΓåÆ  Zoom
+[SNI]  web.telegram.org  ΓåÆ  Telegram
+[SNI]  www.tiktok.com  ΓåÆ  TikTok
+[BLOCKED] 192.168.1.100:63971 -> 99.86.0.100:443  app=TikTok  sni=www.tiktok.com
+[SNI]  open.spotify.com  ΓåÆ  Spotify
+[SNI]  www.cloudflare.com  ΓåÆ  Cloudflare
+[SNI]  www.microsoft.com  ΓåÆ  Twitter/X
+[SNI]  www.apple.com  ΓåÆ  Apple
+[HTTP] example.com  ΓåÆ  HTTPS
+[HTTP] httpbin.org  ΓåÆ  HTTPS
+
+ΓòöΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòù
+Γòæ                    PROCESSING REPORT                         Γòæ
+ΓòáΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòú
+Γòæ Total Packets:              77                           Γòæ
+Γòæ Forwarded:                  75                           Γòæ
+Γòæ Dropped:                     2                           Γòæ
+Γòæ Unique Flows:               43                           Γòæ
+ΓòáΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòú
+Γòæ                  APPLICATION BREAKDOWN                       Γòæ
+ΓòáΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòú
+Γòæ Unknown              55  71.4% ##############        Γòæ
+Γòæ DNS                   4   5.2% #                     Γòæ
+Γòæ Twitter/X             3   3.9%                       Γòæ
+Γòæ HTTPS                 2   2.6%                       Γòæ
+Γòæ Spotify               1   1.3%                       Γòæ
+Γòæ TikTok                1   1.3%                       Γòæ
+Γòæ Telegram              1   1.3%                       Γòæ
+Γòæ Amazon                1   1.3%                       Γòæ
+Γòæ Instagram             1   1.3%                       Γòæ
+Γòæ Discord               1   1.3%                       Γòæ
+Γòæ Facebook              1   1.3%                       Γòæ
+Γòæ GitHub                1   1.3%                       Γòæ
+Γòæ YouTube               1   1.3%                       Γòæ
+Γòæ Zoom                  1   1.3%                       Γòæ
+Γòæ Google                1   1.3%                       Γòæ
+Γòæ Cloudflare            1   1.3%                       Γòæ
+Γòæ Apple                 1   1.3%                       Γòæ
+ΓòÜΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓò¥
+
+[Detected Domains / SNIs]
+  www.youtube.com  ΓåÆ  DNS
+  httpbin.org  ΓåÆ  HTTPS
+  example.com  ΓåÆ  HTTPS
+  www.apple.com  ΓåÆ  Apple
+  www.google.com  ΓåÆ  DNS
+  twitter.com  ΓåÆ  Twitter/X
+  www.instagram.com  ΓåÆ  Instagram
+  www.facebook.com  ΓåÆ  Facebook
+  www.facebook.com  ΓåÆ  DNS
+  api.twitter.com  ΓåÆ  DNS
+  www.youtube.com  ΓåÆ  YouTube  [BLOCKED]
+  github.com  ΓåÆ  GitHub
+  www.amazon.com  ΓåÆ  Amazon
+  www.netflix.com  ΓåÆ  Twitter/X
+  www.google.com  ΓåÆ  Google
+  discord.com  ΓåÆ  Discord
+  www.tiktok.com  ΓåÆ  TikTok  [BLOCKED]
+  zoom.us  ΓåÆ  Zoom
+  web.telegram.org  ΓåÆ  Telegram
+  www.cloudflare.com  ΓåÆ  Cloudflare
+  open.spotify.com  ΓåÆ  Spotify
+  www.microsoft.com  ΓåÆ  Twitter/X
+
+[DPI] Output written to: output.pcap
+
+lenovo@sahilmadaan048 MINGW64 /d/Code_Everyday/WebDev PROJECTS/FlowShield (main)
+$ 
