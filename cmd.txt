@@ -12,3 +12,19 @@ Step 3 — Run with no blocking (just classify):
 
 Step 4 — Run with blocking:
     ./dpi_simple.exe test_dpi.pcap output.pcap --block-app YouTube --block-domain tiktok
+
+
+
+
+g++ -std=c++17 -pthread -O2 -I include -o dpi_engine.exe \
+src/dpi_mt.cpp \
+src/pcap_reader.cpp \
+src/packet_parser.cpp \
+src/sni_extractor.cpp \
+src/types.cpp \
+src/connection_tracker.cpp \
+src/rule_manager.cpp \
+src/load_balancer.cpp \
+src/fast_path.cpp
+
+./dpi_engine.exe test_dpi.pcap output.pcap
