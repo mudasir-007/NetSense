@@ -1,12 +1,12 @@
 #ifndef DPI_TYPES_H
 #define DPI_TYPES_H
 
-#include <cstdint>
-#include <string>
-#include <functional> // for std::hash
-#include <chrono>
-#include <vector>
-#include <atomic>
+#include <cstdint>    // uint32_t, uint16_t, uint8_t, uint64_t
+#include <string>     // std::string
+#include <functional> // std::hash
+#include <chrono>     // timestamps
+#include <vector>     // std::vector
+#include <atomic>     // std::atomic
 
 /*
     types.h => shared data structure used across the entire DPI engine
@@ -277,3 +277,34 @@ namespace DPI
 }
 
 #endif
+
+/*
+types.h defines the language of the entire project:
+
+*FiveTuple       → identity of a connection
+
+*FiveTupleHash   → how to store FiveTuple in a map
+*AppType         → what app is this traffic
+*ConnectionState → where in lifecycle
+*PacketAction    → what to do with this packet
+*Connection      → full state of one flow
+*PacketJob       → one packet travelling between threads
+*DPIStats        → engine-wide counters
+*/
+
+
+/*
+ *   Packet arrives
+ *        |
+ *        v
+ *   [Flow Table Lookup]
+ *        |
+ *        v
+ *   action == DROP?
+ *      /       \
+ *    YES        NO
+ *     |          |
+ *     v          v
+ *   Discard   Write to
+ *             output.pcap
+ */
