@@ -4,7 +4,7 @@
 #include <iomanip>
 #include <cstring>
 
-// short macros to convert network byte order to host byte order
+// *short macros to convert network byte order to host byte order
 #define ntohs(x) PortableNet::netToHost16(x)
 #define ntohl(x) PortableNet::netToHost32(x)
 
