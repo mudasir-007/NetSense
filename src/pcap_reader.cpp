@@ -1,5 +1,49 @@
+/*
+ * PcapReader complete workflow:
+ *
+ * PcapReader reader
+ *        |
+ *        v
+ * reader.open("file.pcap")
+ *        |
+ *        v
+ * read 24 bytes → global_header_
+ *        |
+ *        v
+ * check magic_number
+ *    NATIVE  → needs_byte_swap_ = false
+ *    SWAPPED → needs_byte_swap_ = true → swap header fields
+ *    INVALID → return false
+ *        |
+ *        v
+ * loop: reader.readNextPacket(packet)
+ *        |
+ *        v
+ * read 16 bytes → packet.header
+ *        |
+ *        v
+ * swap if needed
+ *        |
+ *        v
+ * sanity check incl_len
+ *        |
+ *        v
+ * read incl_len bytes → packet.data
+ *        |
+ *        v
+ * return true → repeat
+ *        |
+ *        v
+ * file_.good() == false → return false → loop ends
+ *        |
+ *        v
+ * reader.close()
+ */
+
+
 #include "pcap_reader.h"
 #include <iostream>
+
 
 namespace PacketAnalyzer
 {
@@ -8,6 +52,10 @@ namespace PacketAnalyzer
     // If we see the "swapped" version, the file was written on a big-endian machine
     constexpr uint32_t PCAP_MAGIC_NATIVE = 0xa1b2c3d4;  // our machine order
     constexpr uint32_t PCAP_MAGIC_SWAPPED = 0xd4c3b2a1; // opposite order
+    /*
+    *NATIVE:  A1 B2 C3 D4
+    *SWAPPED: D4 C3 B2 A1  ← exact reverse
+    */
 
     PcapReader::~PcapReader()
     {
